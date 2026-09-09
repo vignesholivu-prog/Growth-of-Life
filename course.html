@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Course Details | WeGrow Skill Campus</title>
+    
+    <link rel="stylesheet" href="course.css">
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Learn • Build • Grow
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="course.html" class="active">
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="trainer.html">
+                        Trainer
+                    </a>
+                </li>
+
+                <li>
+                    <a href="  achievement.html">
+                        Achievement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         COURSE HEADER
+    ========================================= -->
+
+    <section class="details-header">
+
+        <a href="course.html" class="back-btn">
+            ← Back to Courses
+        </a>
+
+        <h1 id="courseTitle">
+            Course Name
+        </h1>
+
+        <p id="courseDescription">
+            Course description
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================
+         COURSE DETAILS
+    ========================================= -->
+
+    <main class="details-container">
+
+
+        <div class="details-content">
+
+
+            <section>
+
+                <h2>
+                    Course Overview
+                </h2>
+
+                <p id="overviewText">
+                    Learn practical skills through
+                    industry-relevant training,
+                    real-world projects and
+                    hands-on practice.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    What You Will Learn
+                </h2>
+
+                <ul
+                    class="learn-list"
+                    id="learnList">
+                </ul>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    Technologies & Tools
+                </h2>
+
+                <div
+                    class="technology-list"
+                    id="technologyList">
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h2>
+                    Career Opportunities
+                </h2>
+
+                <div
+                    class="career-list"
+                    id="careerList">
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+        
+
+
+        <!-- =========================================
+             COURSE CARD
+        ========================================= -->
+
+        <aside class="course-summary">
+           <img  id="courseimage"  src="data:image/jpeg;base64,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" alt="">
+
+            
+            <div class="summary-content">
+
+                <h2 id="summaryTitle">
+                    Course Name
+                </h2>
+
+
+                <div class="course-info">
+
+                    <div class="info-row">
+
+                        <span>
+                            Duration
+                        </span>
+
+                        <strong id="courseDuration">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Level
+                        </span>
+
+                        <strong>
+                            Beginner to Advanced
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Mode
+                        </span>
+
+                        <strong>
+                            Practical
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>
+                            Projects
+                        </span>
+
+                        <strong>
+                            Real-World
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="enroll-btn"
+                    onclick="openEnrollment()">
+
+                    Enroll Now
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- =========================================
+         ENROLLMENT MODAL
+    ========================================= -->
+
+    <div
+        class="modal"
+        id="enrollmentModal">
+
+
+        <div class="modal-box">
+
+
+            <button
+                class="close-btn"
+                onclick="closeEnrollment()">
+
+                ×
+
+            </button>
+
+
+            <div id="enrollmentFormContainer">
+
+
+                <div class="modal-header">
+
+                    <h2>
+                        Enroll Now
+                    </h2>
+
+                    <p>
+                        Fill in your details below.
+                        Our team will contact you shortly.
+                    </p>
+
+                </div>
+
+
+                <!-- SELECTED COURSE -->
+
+                <div class="selected-course-box">
+
+                    <div class="selected-course-icon">
+                        🎓
+                    </div>
+
+                    <div class="selected-course-text">
+
+                        <span>
+                            Selected Course
+                        </span>
+
+                        <strong id="selectedCourse">
+                            Course Name
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="enrollmentForm">
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="studentName">
+
+                                Full Name
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <span class="input-icon">
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="studentName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="studentEmail">
+
+                                Email Address
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <span class="input-icon">
+                                    ✉
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="studentEmail"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="studentPhone">
+
+                                Phone Number
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <span class="input-icon">
+                                    ☎
+                                </span>
+
+                                <input
+                                    type="tel"
+                                    id="studentPhone"
+                                    placeholder="10-digit mobile number"
+                                    maxlength="10"
+                                    pattern="[0-9]{10}"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="studentLocation">
+
+                                Location
+                                <span class="required">*</span>
+
+                            </label>
+
+                            <div class="input-wrap">
+
+                                <span class="input-icon">
+                                    📍
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="studentLocation"
+                                    placeholder="Enter your location"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+<div class="form-group">
+
+    <label for="studentEducation">
+        Education
+    </label>
+
+    <select id="studentEducation">
+
+        <option value="">
+            Select your education
+        </option>
+
+        <option value="10th">
+            10th
+        </option>
+
+        <option value="12th">
+            12th
+        </option>
+
+        <option value="Diploma">
+            Diploma
+        </option>
+
+        <option value="UG">
+            Undergraduate
+        </option>
+
+        <option value="PG">
+            Postgraduate
+        </option>
+
+        <option value="Other">
+            Other
+        </option>
+
+    </select>
+
+</div>
+
+
+<!-- PREFERRED BATCH TIMING -->
+
+<div class="form-group">
+
+    <label for="batchTime">
+        Preferred Batch Timing
+    </label>
+
+    <select
+        id="batchTime"
+        name="batchTime"
+        required>
+
+        <option value="">
+            Select Batch Timing
+        </option>
+
+        <option value="Morning">
+            Morning
+        </option>
+
+        <option value="Afternoon">
+            Afternoon
+        </option>
+
+        <option value="Evening">
+            Evening
+        </option>
+
+    </select>
+
+</div>
+
+
+<!-- EXPERIENCE -->
+
+<div class="form-group">
+
+    <label for="studentExperience">
+        Experience Level
+    </label>
+
+    <select id="studentExperience">
+
+        <option value="">
+            Select experience
+        </option>
+
+        <option value="Fresher">
+            Fresher
+        </option>
+
+        <option value="Student">
+            Student
+        </option>
+
+        <option value="Working Professional">
+            Working Professional
+        </option>
+
+    </select>
+
+</div>
+
+
+                        <div class="form-group full">
+
+                            <label for="studentMessage">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="studentMessage"
+                                placeholder="Tell us if you have any questions..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Submit Enrollment
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div
+                class="success-message"
+                id="successMessage">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Enrollment Successful!
+                </h3>
+
+                <p>
+                    Thank you for your interest.
+                    Our team will contact you soon.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <section class="courses-section">
+
+    <div class="course-heading">
+        <span>OUR COURSES</span>
+        <h2>Explore Our <strong>Popular Courses</strong></h2>
+        <p>
+            Learn industry-ready skills with practical training,
+            real-time projects and expert guidance.
+        </p>
+    </div>
+
+    <div class="courses-container">
+
+        <!-- Python Full Stack -->
+        <div class="course-card">
+            <div class="course-icon">🐍</div>
+            <h3>Python Full Stack</h3>
+
+            <p>
+                Learn frontend and backend development using Python
+                and build complete web applications.
+            </p>
+
+            <div class="course-info">
+                <span>⏱ 6 Months</span>
+                <span>📚 Beginner</span>
+            </div>
+
+            <h4>What You Will Learn</h4>
+
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>SQL & Database</li>
+            </ul>
+
+            <a href="#" class="course-btn">View Course</a>
+        </div>
+
+
+        <!-- Java Full Stack -->
+        <div class="course-card">
+            <div class="course-icon">☕</div>
+            <h3>Java Full Stack</h3>
+
+            <p>
+                Master Java programming and full stack development
+                to create powerful web applications.
+            </p>
+
+            <div class="course-info">
+                <span>⏱ 6 Months</span>
+                <span>📚 Beginner</span>
+            </div>
+
+            <h4>What You Will Learn</h4>
+
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Core Java</li>
+                <li>Spring Boot</li>
+                <li>MySQL</li>
+            </ul>
+
+            <a href="#" class="course-btn">View Course</a>
+        </div>
+
+
+        <!-- Web Development -->
+        <div class="course-card">
+            <div class="course-icon">🌐</div>
+            <h3>Web Development</h3>
+
+            <p>
+                Build modern, responsive and interactive websites
+                using the latest web technologies.
+            </p>
+
+            <div class="course-info">
+                <span>⏱ 4 Months</span>
+                <span>📚 Beginner</span>
+            </div>
+
+            <h4>What You Will Learn</h4>
+
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+            </ul>
+
+            <a href="#" class="course-btn">View Course</a>
+        </div>
+
+
+        <!-- Data Analytics -->
+        <div class="course-card">
+            <div class="course-icon">📊</div>
+            <h3>Data Analytics</h3>
+
+            <p>
+                Learn how to analyze data, create dashboards and
+                generate useful business insights.
+            </p>
+
+            <div class="course-info">
+                <span>⏱ 4 Months</span>
+                <span>📚 Beginner</span>
+            </div>
+
+            <h4>What You Will Learn</h4>
+
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Excel</li>
+                <li>Power BI</li>
+                <li>Data Visualization</li>
+            </ul>
+
+            <a href="#" class="course-btn">View Course</a>
+        </div>
+
+
+        <!-- JavaScript -->
+        <div class="course-card">
+            <div class="course-icon">⚡</div>
+            <h3>JavaScript</h3>
+
+            <p>
+                Learn JavaScript from basics to advanced concepts
+                and create dynamic web applications.
+            </p>
+
+            <div class="course-info">
+                <span>⏱ 3 Months</span>
+                <span>📚 Beginner</span>
+            </div>
+
+            <h4>What You Will Learn</h4>
+
+            <ul>
+                <li>Variables & Data Types</li>
+                <li>Functions</li>
+                <li>Arrays & Objects</li>
+                <li>DOM</li>
+                <li>Events & APIs</li>
+            </ul>
+
+            <a href="#" class="course-btn">View Course</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-box footer-brand">
+
+                <h2>
+                    Code<span>Academy</span>
+                </h2>
+
+                <p>
+                    Learn practical IT skills,
+                    build real-world projects,
+                    and take the next step
+                    towards your dream career.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#">f</a>
+                    <a href="#">in</a>
+                    <a href="#">𝕏</a>
+                    <a href="#">▶</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="course.html">
+                            Courses
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="trainers.html">
+                          Trainers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>
+                    Popular Courses
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">
+                            Python Full Stack
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Java Full Stack
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Web Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            Data Analytics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            JavaScript
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <div class="contact-item">
+
+                    <span>📍</span>
+
+                    <p>
+                        Sivakasi, Tamil Nadu, India
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span>📞</span>
+
+                    <p>
+                        +91 93443 37331
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span>✉️</span>
+
+                    <p>
+                        info@codeacademy.com
+                    </p>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <span>🕐</span>
+
+                    <p>
+                        Mon - Sat : 9 AM - 7 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 CodeAcademy.
+                All Rights Reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =========================================
+           COURSE DATA
+        ========================================= */
+
+        const courses = {
+
+            aipython: {
+
+                title: "AI Python Full Stack Development",
+
+                description:
+                    "Master Python, Django, REST APIs and AI technologies through practical full-stack development.",
+
+                image: "images/python.jpg",
+
+                duration: "6 Months",
+
+                overview:
+                    "Build modern web applications using Python, Django, REST APIs and AI technologies with hands-on real-world projects.",
+
+                learn: [
+                    "Python programming fundamentals",
+                    "Object-Oriented Programming",
+                    "HTML, CSS and JavaScript",
+                    "Django framework",
+                    "REST API development",
+                    "Database integration",
+                    "AI integration",
+                    "Real-world full-stack projects"
+                ],
+
+                technologies: [
+                    "Python",
+                    "Django",
+                    "REST API",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "SQL",
+                    "AI"
+                ],
+
+                careers: [
+                    "Python Developer",
+                    "Full Stack Developer",
+                    "Django Developer",
+                    "Backend Developer"
+                ]
+
+            },
+
+
+            aijava: {
+
+                title: "AI Java Full Stack Development",
+
+                description:
+                    "Learn Java, Spring Boot, Microservices and React with practical full-stack development.",
+
+                image: "images/java.jpg",
+
+                duration: "6 Months",
+
+                overview:
+                    "Develop enterprise-ready applications using Java, Spring Boot, Microservices and modern frontend technologies.",
+
+                learn: [
+                    "Core Java programming",
+                    "Object-Oriented Programming",
+                    "Spring Boot",
+                    "REST APIs",
+                    "Microservices",
+                    "React fundamentals",
+                    "Database integration",
+                    "Full-stack projects"
+                ],
+
+                technologies: [
+                    "Java",
+                    "Spring Boot",
+                    "Microservices",
+                    "React",
+                    "SQL",
+                    "REST API"
+                ],
+
+                careers: [
+                    "Java Developer",
+                    "Full Stack Developer",
+                    "Spring Boot Developer",
+                    "Backend Developer"
+                ]
+
+            },
+
+
+            dataanalytics: {
+
+                title: "Data Analytics",
+
+                description:
+                    "Learn Excel, Python, SQL and Power BI to turn data into meaningful business insights.",
+
+                image: "images/data analytics.jpg",
+
+                duration: "4 Months",
+
+                overview:
+                    "Learn how to collect, clean, analyze and visualize data using industry-standard analytics tools.",
+
+                learn: [
+                    "Advanced Excel",
+                    "Python for Data Analysis",
+                    "SQL",
+                    "Data Cleaning",
+                    "Data Visualization",
+                    "Power BI",
+                    "Dashboard Creation",
+                    "Real-world analytics projects"
+                ],
+
+                technologies: [
+                    "Excel",
+                    "Python",
+                    "SQL",
+                    "Power BI",
+                    "Pandas",
+                    "Matplotlib"
+                ],
+
+                careers: [
+                    "Data Analyst",
+                    "Business Analyst",
+                    "BI Analyst",
+                    "Reporting Analyst"
+                ]
+
+            },
+
+
+            datascience: {
+
+                title: "Data Science & AI",
+
+                description:
+                    "Learn machine learning, deep learning and generative AI to solve real-world problems.",
+
+                image: "images/data science.jpg",
+
+                duration: "7 Months",
+
+                overview:
+                    "Build strong skills in data science, machine learning, deep learning and modern generative AI technologies.",
+
+                learn: [
+                    "Python for Data Science",
+                    "Statistics",
+                    "Machine Learning",
+                    "Deep Learning",
+                    "Data Visualization",
+                    "Generative AI",
+                    "Model Development",
+                    "AI projects"
+                ],
+
+                technologies: [
+                    "Python",
+                    "NumPy",
+                    "Pandas",
+                    "Scikit-learn",
+                    "TensorFlow",
+                    "Deep Learning",
+                    "Generative AI"
+                ],
+
+                careers: [
+                    "Data Scientist",
+                    "Machine Learning Engineer",
+                    "AI Engineer",
+                    "Data Analyst"
+                ]
+
+            },
+
+
+            aiml: {
+
+                title: "AI & Machine Learning",
+
+                description:
+                    "Learn artificial intelligence and machine learning using TensorFlow, PyTorch and Scikit-learn.",
+
+                image: "images/artificial intelligence.jpg",
+
+                duration: "Contact for duration",
+
+                overview:
+                    "Understand AI and machine learning concepts and build practical intelligent applications.",
+
+                learn: [
+                    "Python programming",
+                    "Machine Learning fundamentals",
+                    "Supervised Learning",
+                    "Unsupervised Learning",
+                    "Deep Learning",
+                    "Neural Networks",
+                    "Model Training",
+                    "AI projects"
+                ],
+
+                technologies: [
+                    "Python",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Scikit-learn",
+                    "NumPy",
+                    "Pandas"
+                ],
+
+                careers: [
+                    "AI Engineer",
+                    "Machine Learning Engineer",
+                    "Deep Learning Engineer",
+                    "AI Developer"
+                ]
+
+            },
+
+
+            cybersecurity: {
+
+                title: "Cyber Security",
+
+                description:
+                    "Learn ethical hacking, network security and data protection through practical training.",
+
+                image: "images/cyber security.jpg",
+
+                duration: "4 Months",
+
+                overview:
+                    "Develop practical cybersecurity skills including ethical hacking, network security and data protection.",
+
+                learn: [
+                    "Cyber Security fundamentals",
+                    "Networking",
+                    "Ethical Hacking",
+                    "Web Security",
+                    "Network Security",
+                    "Vulnerability Assessment",
+                    "Data Protection",
+                    "Security projects"
+                ],
+
+                technologies: [
+                    "Networking",
+                    "Linux",
+                    "Ethical Hacking",
+                    "Web Security",
+                    "Cyber Security Tools"
+                ],
+
+                careers: [
+                    "Cyber Security Analyst",
+                    "Ethical Hacker",
+                    "Security Analyst",
+                    "Network Security Engineer"
+                ]
+
+            },
+
+
+            digitalmarketing: {
+
+                title: "Digital Marketing",
+
+                description:
+                    "Learn SEO, SEM, social media marketing and analytics to grow businesses online.",
+
+                image: "images/ai.jpg",
+
+                duration: "3 Months",
+
+                overview:
+                    "Learn modern digital marketing strategies and tools used to promote businesses online.",
+
+                learn: [
+                    "Digital Marketing fundamentals",
+                    "Search Engine Optimization",
+                    "Search Engine Marketing",
+                    "Social Media Marketing",
+                    "Content Marketing",
+                    "Google Analytics",
+                    "Campaign Planning",
+                    "Marketing Analytics"
+                ],
+
+                technologies: [
+                    "SEO",
+                    "SEM",
+                    "Social Media",
+                    "Google Analytics",
+                    "Content Marketing"
+                ],
+
+                careers: [
+                    "Digital Marketing Executive",
+                    "SEO Analyst",
+                    "Social Media Executive",
+                    "Marketing Analyst"
+                ]
+
+            },
+
+
+            officeautomation: {
+
+                title: "Office Automation",
+
+                description:
+                    "Build practical skills in MS Office tools for modern office and business environments.",
+
+                image: "images/data analytics.jpg",
+
+                duration: "2 Months",
+
+                overview:
+                    "Learn essential office productivity tools and practical documentation skills.",
+
+                learn: [
+                    "MS Word",
+                    "MS Excel",
+                    "MS PowerPoint",
+                    "Document Preparation",
+                    "Spreadsheet Management",
+                    "Presentation Creation",
+                    "Office Productivity"
+                ],
+
+                technologies: [
+                    "MS Word",
+                    "MS Excel",
+                    "MS PowerPoint"
+                ],
+
+                careers: [
+                    "Office Assistant",
+                    "Computer Operator",
+                    "Data Entry Executive",
+                    "Administrative Assistant"
+                ]
+
+            },
+
+
+            accounting: {
+
+                title: "Accounting Software",
+
+                description:
+                    "Learn accounting software, bookkeeping and basic taxation concepts.",
+
+                image: "images/data analytics.jpg",
+
+                duration: "Contact for duration",
+
+                overview:
+                    "Develop practical accounting software skills for managing business financial records.",
+
+                learn: [
+                    "Accounting fundamentals",
+                    "Bookkeeping",
+                    "Tally",
+                    "QuickBooks",
+                    "GST basics",
+                    "Financial Reports",
+                    "Business Accounting"
+                ],
+
+                technologies: [
+                    "Tally",
+                    "QuickBooks",
+                    "Excel",
+                    "GST"
+                ],
+
+                careers: [
+                    "Accountant",
+                    "Accounts Executive",
+                    "Finance Assistant",
+                    "Billing Executive"
+                ]
+
+            },
+
+
+            uiux: {
+
+                title: "UI & UX Design",
+
+                description:
+                    "Learn modern UI and UX design principles and create user-friendly digital experiences.",
+
+                image: "images/ui ux.jpg",
+
+                duration: "Contact for duration",
+
+                overview:
+                    "Learn how to design attractive, simple and user-friendly digital interfaces.",
+
+                learn: [
+                    "UI Design fundamentals",
+                    "UX Design principles",
+                    "Wireframing",
+                    "Prototyping",
+                    "User Research",
+                    "Design Systems",
+                    "Responsive Design",
+                    "Portfolio Projects"
+                ],
+
+                technologies: [
+                    "Figma",
+                    "UI Design",
+                    "UX Design",
+                    "Wireframing",
+                    "Prototyping"
+                ],
+
+                careers: [
+                    "UI Designer",
+                    "UX Designer",
+                    "Product Designer",
+                    "Web Designer"
+                ]
+
+            },
+
+
+            mean: {
+
+                title: "MEAN Stack Development",
+
+                description:
+                    "Learn MongoDB, Express.js, Angular and Node.js to build modern web applications.",
+
+                image: "images/mern stack.jpg",
+
+                /* UPDATED */
+                duration: "Contact for duration",
+
+                overview:
+                    "Build complete web applications using the MEAN technology stack.",
+
+                learn: [
+                    "HTML and CSS",
+                    "JavaScript",
+                    "MongoDB",
+                    "Express.js",
+                    "Angular",
+                    "Node.js",
+                    "REST APIs",
+                    "Full-stack projects"
+                ],
+
+                technologies: [
+                    "MongoDB",
+                    "Express.js",
+                    "Angular",
+                    "Node.js",
+                    "JavaScript"
+                ],
+
+                careers: [
+                    "MEAN Stack Developer",
+                    "Full Stack Developer",
+                    "Angular Developer",
+                    "Node.js Developer"
+                ]
+
+            },
+
+
+            mern: {
+
+                title: "MERN Stack Development",
+
+                description:
+                    "Learn MongoDB, Express.js, React and Node.js to build modern full-stack applications.",
+
+                image: "images/mern stack.jpg",
+
+                /* UPDATED */
+                duration: "Contact for duration",
+
+                overview:
+                    "Develop modern and responsive full-stack applications using the MERN technology stack.",
+
+                learn: [
+                    "HTML and CSS",
+                    "JavaScript",
+                    "MongoDB",
+                    "Express.js",
+                    "React",
+                    "Node.js",
+                    "REST APIs",
+                    "Full-stack projects"
+                ],
+
+                technologies: [
+                    "MongoDB",
+                    "Express.js",
+                    "React",
+                    "Node.js",
+                    "JavaScript"
+                ],
+
+                careers: [
+                    "MERN Stack Developer",
+                    "Full Stack Developer",
+                    "React Developer",
+                    "Node.js Developer"
+                ]
+
+            }
+
+        };
+
+
+        /* =========================================
+           GET COURSE FROM URL
+        ========================================= */
+
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const courseKey =
+            urlParams.get("course") || "aipython";
+
+        const course =
+            courses[courseKey] || courses.aipython;
+
+
+
+        /* =========================================
+           DISPLAY COURSE
+        ========================================= */
+
+        document.getElementById(
+            "courseTitle"
+        ).textContent =
+            course.title;
+
+
+        document.getElementById(
+            "courseDescription"
+        ).textContent =
+            course.description;
+
+
+        document.getElementById(
+            "summaryTitle"
+        ).textContent =
+            course.title;
+
+
+        document.getElementById(
+            "overviewText"
+        ).textContent =
+            course.overview;
+
+
+        document.getElementById(
+            "courseDuration"
+        ).textContent =
+            course.duration;
+
+
+        document.getElementById(
+            "courseImage"
+        ).src =
+            course.image;
+
+
+        document.getElementById(
+            "courseImage"
+        ).alt =
+            course.title;
+
+
+
+        /* =========================================
+           LEARN LIST
+        ========================================= */
+
+        const learnList =
+            document.getElementById(
+                "learnList"
+            );
+
+        course.learn.forEach(function(item) {
+
+            const li =
+                document.createElement("li");
+
+            li.textContent = item;
+
+            learnList.appendChild(li);
+
+        });
+
+
+
+        /* =========================================
+           TECHNOLOGIES
+        ========================================= */
+
+        const technologyList =
+            document.getElementById(
+                "technologyList"
+            );
+
+        course.technologies.forEach(function(item) {
+
+            const span =
+                document.createElement("span");
+
+            span.className =
+                "technology";
+
+            span.textContent = item;
+
+            technologyList.appendChild(span);
+
+        });
+
+
+
+        /* =========================================
+           CAREERS
+        ========================================= */
+
+        const careerList =
+            document.getElementById(
+                "careerList"
+            );
+
+        course.careers.forEach(function(item) {
+
+            const div =
+                document.createElement("div");
+
+            div.className =
+                "career-item";
+
+            div.textContent = item;
+
+            careerList.appendChild(div);
+
+        });
+
+
+
+        /* =========================================
+           OPEN ENROLLMENT
+        ========================================= */
+
+        function openEnrollment() {
+
+            document.getElementById(
+                "selectedCourse"
+            ).textContent =
+                course.title;
+
+
+            document.getElementById(
+                "enrollmentModal"
+            ).classList.add("show");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+
+        /* =========================================
+           CLOSE ENROLLMENT
+        ========================================= */
+
+        function closeEnrollment() {
+
+            document.getElementById(
+                "enrollmentModal"
+            ).classList.remove("show");
+
+
+            document.body.style.overflow =
+                "auto";
+
+        }
+
+
+
+        /* =========================================
+           CLICK OUTSIDE MODAL
+        ========================================= */
+
+        document.getElementById(
+            "enrollmentModal"
+        ).addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target === this
+                ) {
+
+                    closeEnrollment();
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           ESC KEY
+        ========================================= */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeEnrollment();
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           PHONE NUMBER
+        ========================================= */
+
+        document.getElementById(
+            "studentPhone"
+        ).addEventListener(
+            "input",
+            function() {
+
+                this.value =
+                    this.value.replace(
+                        /[^0-9]/g,
+                        ""
+                    );
+
+            }
+        );
+
+
+
+        /* =========================================
+           FORM SUBMIT
+        ========================================= */
+
+        document.getElementById(
+            "enrollmentForm"
+        ).addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const phone =
+                    document.getElementById(
+                        "studentPhone"
+                    ).value.trim();
+
+
+                if (
+                    phone.length !== 10
+                ) {
+
+                    alert(
+                        "Please enter a valid 10-digit phone number."
+                    );
+
+                    return;
+
+                }
+
+
+                document.getElementById(
+                    "enrollmentFormContainer"
+                ).style.display =
+                    "none";
+
+
+                document.getElementById(
+                    "successMessage"
+                ).classList.add(
+                    "show"
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

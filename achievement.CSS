@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+     background:  #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    color: #1e293b;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background:  #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #7e22ce
+    );
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    color: #1d4ed8;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+/* ================= ACHIEVEMENT CARD ================= */
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    padding: 30px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    background: white;
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.number {
+    font-size: 35px;
+    font-weight: bold;
+    color: #1d4ed8;
+    margin-top: 10px;
+}
+
+.achievement-card p {
+    margin-top: 10px;
+    color: #475569;
+}
+
+
+/* ================= WORKSHOP ================= */
+
+.workshop-card {
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    height: 100%;
+
+    transition: 0.3s;
+}
+
+.workshop-card:hover {
+    transform: translateY(-8px);
+    background: white;
+}
+
+.workshop-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.workshop-card h4 {
+    color: #1d4ed8;
+}
+
+.workshop-card p {
+    color: #475569;
+}
+
+.workshop-details {
+    margin-top: 20px;
+}
+
+.workshop-details p {
+    margin-bottom: 8px;
+}
+
+.btn-workshop {
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-workshop:hover {
+    background: #0284c7;
+    color: white;
+}
+
+
+/* ================= SUCCESS ================= */
+
+.success-card {
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    height: 100%;
+
+    border: 1px solid #e2e8f0;
+}
+
+.success-card h4 {
+    color: #ca8a04;
+}
+
+.success-badge {
+    display: inline-block;
+
+    background: rgba(34, 197, 94, 0.15);
+
+    color: #16a34a;
+
+    border: 1px solid #4ade80;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-box {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e2e8f0;
+}
+
+.table {
+    margin: 0;
+    color: #1e293b;
+}
+
+.table thead {
+    background: #1e40af;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+}
+
+.table tbody tr {
+    background: white;
+}
+
+.package {
+    color: #16a34a !important;
+    font-weight: bold;
+}
+
+
+/* ================= CERTIFICATE CARD ================= */
+
+.certificate {
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    height: 100%;
+}
+
+.certificate-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.certificate h4 {
+    color: #ca8a04;
+}
+
+.certificate p {
+    color: #475569;
+}
+
+.btn-custom {
+    background: #7c3aed;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: #6d28d9;
+    color: white;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal-content {
+    background: #1e293b;
+    color: white;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modal-title {
+    color: #38bdf8;
+}
+
+.form-label {
+    color: white;
+    font-weight: bold;
+}
+
+.form-control {
+    background: #334155;
+    border: 1px solid #64748b;
+    color: white;
+}
+
+.form-control:focus {
+    background: #334155;
+    color: white;
+    border-color: #38bdf8;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: #cbd5e1;
+}
+
+
+/* ================= CERTIFICATE VIEW ================= */
+
+.certificate-view {
+    padding: 10px;
+}
+
+.certificate-border {
+    border: 10px solid #facc15;
+
+    outline: 3px solid #38bdf8;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #f8fafc
+        );
+
+    color: #1e293b;
+
+    min-height: 500px;
+
+    position: relative;
+}
+
+.certificate-logo {
+    font-size: 55px;
+}
+
+.certificate-border h1 {
+    color: #1d4ed8;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+.certificate-border h3 {
+    color: #7c3aed;
+
+    font-weight: bold;
+}
+
+.presented {
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    color: #475569;
+}
+
+#certificateStudentName {
+    color: #dc2626;
+
+    font-size: 38px;
+
+    font-family: Georgia, serif;
+
+    margin: 20px 0;
+}
+
+#certificateCourse {
+    color: #059669;
+
+    font-size: 28px;
+}
+
+.certificate-border h4 {
+    color: #1d4ed8;
+
+    margin-top: 15px;
+}
+
+.certificate-date {
+    margin-top: 25px;
+
+    color: #475569;
+}
+
+.signature-box {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin-top: 50px;
+
+    font-weight: bold;
+}
+
+.signature-box span {
+    color: #475569;
+}
+
+
+/* ================= FOOTER ================= */
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+    background: #F1F5F9;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 70px;
+}
+
+
+/* Main Container */
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+
+/* ============================= */
+/* BRAND */
+/* ============================= */
+
+.footer-brand h2 {
+    font-size: 28px;
+    color: #1E293B;
+    margin-bottom: 15px;
+}
+
+.footer-brand h2 span {
+    color: #6366F1;
+}
+
+.footer-brand p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 330px;
+}
+
+
+/* ============================= */
+/* FOOTER HEADINGS */
+/* ============================= */
+
+.footer-box h3 {
+    color: #1E293B;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #6366F1;
+
+    padding-left: 5px;
+}
+
+
+/* ============================= */
+/* SOCIAL LINKS */
+/* ============================= */
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #6366F1;
+
+    color: #FFFFFF;
+
+    transform: translateY(-4px);
+}
+
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+.contact-item span {
+    font-size: 17px;
+}
+
+.contact-item p {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================= */
+/* BOTTOM FOOTER */
+/* ============================= */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid #E2E8F0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+
+    color: #64748B;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #6366F1;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 50px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .footer-bottom div {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}

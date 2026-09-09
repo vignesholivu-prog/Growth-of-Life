@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquire Now</title>
+ <link rel="stylesheet" href="contact.css">
+    <body>
+
+<nav class="navbar">
+    <div class="logo">Learn • Build • Grow</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="course.html">Courses</a></li>
+      <li><a href="trainer.html">Trainer</a></li>
+      <li><a href="achievement.html">Achievement</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+    </ul>
+  </nav>
+  </body>    
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="header">
+
+    <div class="top-tag">
+        LET'S TALK
+    </div>
+
+    <h1>
+        Start Your <span>Journey</span>
+    </h1>
+
+    <div class="line"></div>
+
+    <p>
+        Tell us what you're looking for and we'll help you choose the right course.
+    </p>
+
+</section>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<section class="main">
+
+
+    <!-- ================= FORM ================= -->
+
+    <div class="form-card">
+
+        <div class="form-heading">
+
+            <div class="form-icon">
+                ✨
+            </div>
+
+            <div>
+
+                <h2>
+                    Send an Enquiry
+                </h2>
+
+                <p>
+                    Fill in your details below
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="enquiryForm">
+
+
+            <div class="row">
+
+                <div class="input-group">
+
+                    <label>
+                        Full Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Phone Number *
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+91 00000 00000"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                >
+
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="input-group">
+
+                    <label>
+                        Location *
+                    </label>
+
+                    <select id="location">
+
+                        <option value="">
+                            Select location
+                        </option>
+
+                        <option>
+                            Sivakasi
+                        </option>
+
+                        <option>
+                            Virudhunagar
+                        </option>
+
+                        <option>
+                            Madurai
+                        </option>
+
+                        <option>
+                            Chennai
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Course
+                    </label>
+
+                    <select id="course">
+
+                        <option value="">
+                            Select course
+                        </option>
+
+                        <option>
+                            Python Full Stack
+                        </option>
+
+                        <option>
+                            Java Full Stack
+                        </option>
+
+                        <option>
+                            Web Development
+                        </option>
+
+                        <option>
+                            Data Analytics
+                        </option>
+
+                        <option>
+                            JavaScript
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timing-title">
+                Preferred Batch Timing
+            </div>
+
+
+            <div class="timing">
+
+                <label>
+                    <input type="checkbox">
+                    Morning
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Afternoon
+                </label>
+
+                <label>
+                    <input type="checkbox">
+                    Evening
+                </label>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us about your goals..."
+                ></textarea>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Send Enquiry →
+            </button>
+
+
+            <div id="success">
+                ✅ Thank you! Your enquiry has been submitted.
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+
+    <!-- ================= RIGHT ================= -->
+
+    <div class="right">
+
+
+        <!-- CONNECT -->
+
+        <div class="connects">
+
+            <h2>
+                Let's Connect 👋
+            </h2>
+
+            <p>
+                Confused about which course to choose?
+                Talk to our counsellor and find the
+                perfect career path for you.
+            </p>
+
+        </div>
+
+
+
+        <!-- CONTACT DETAILS -->
+
+        <div class="contacts-box">
+
+            <div class="contact-box-title">
+                📌 Contact Details
+            </div>
+
+
+            <div
+                class="contacts-item"
+                onclick="showLocation()"
+            >
+
+                <div class="contacts-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h4>
+                        Visit Our Campus
+                    </h4>
+
+                    <p>
+                        Sivakasi, Tamil Nadu
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="contacts-item"
+                onclick="callNow()"
+            >
+
+                <div class="contacts-icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <h4>
+                        Call Us
+                    </h4>
+
+                    <p>
+                        +91 93443 37331
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="contacts-item"
+                onclick="sendMail()"
+            >
+
+                <div class="contacts-icon">
+                    ✉️
+                </div>
+
+                <div>
+
+                    <h4>
+                        Email Us
+                    </h4>
+
+                    <p>
+                        info@codeacademy.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contacts-item">
+
+                <div class="contacts-icon">
+                    🕐
+                </div>
+
+                <div>
+
+                    <h4>
+                        Working Hours
+                    </h4>
+
+                    <p>
+                        Mon - Sat | 9 AM - 7 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- QUICK CONNECT -->
+
+        <div class="quick">
+
+            <h3>
+                ⚡ Quick Connect
+            </h3>
+
+            <div class="quick-buttons">
+
+                <button
+                    class="call"
+                    onclick="callNow()"
+                >
+                    📞 Call Now
+                </button>
+
+                <button
+                    class="whatsapp"
+                    onclick="openWhatsApp()"
+                >
+                    💬 WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CAREER ================= -->
+
+<section class="career">
+
+    <div class="career-tag">
+        🎓 CAREER PROGRAMS
+    </div>
+
+    <h2>
+        Learn Today.
+        <span>Grow Tomorrow.</span>
+    </h2>
+
+    <div class="line"></div>
+
+    <p>
+        Industry-focused courses designed to make you job-ready.
+    </p>
+
+
+    <div class="courses">
+
+
+        <div class="course">
+
+            <div class="course-icon">
+                🐍
+            </div>
+
+            <h3>
+                Python Full Stack
+            </h3>
+
+        </div>
+
+
+        <div class="course">
+
+            <div class="course-icon">
+                ☕
+            </div>
+
+            <h3>
+                Java Full Stack
+            </h3>
+
+        </div>
+
+
+        <div class="course">
+
+            <div class="course-icon">
+                🌐
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+        </div>
+
+
+        <div class="course">
+
+            <div class="course-icon">
+                📊
+            </div>
+
+            <h3>
+                Data Analytics
+            </h3>
+
+        </div>
+
+
+        <div class="course">
+
+            <div class="course-icon">
+                ⚡
+            </div>
+
+            <h3>
+                JavaScript
+            </h3>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+    /* FORM SUBMIT */
+
+    document
+        .getElementById("enquiryForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            let name =
+                document.getElementById("name").value.trim();
+
+            let phone =
+                document.getElementById("phone").value.trim();
+
+            let location =
+                document.getElementById("location").value;
+
+
+            if (name === "") {
+
+                alert("Please enter your name");
+
+                return;
+            }
+
+
+            if (phone === "") {
+
+                alert("Please enter your phone number");
+
+                return;
+            }
+
+
+            if (location === "") {
+
+                alert("Please select your location");
+
+                return;
+            }
+
+
+            document
+                .getElementById("success")
+                .style.display = "block";
+
+
+            document
+                .getElementById("enquiryForm")
+                .reset();
+
+        });
+
+
+
+    /* LOCATION */
+
+    function showLocation() {
+
+        alert(
+            "📍 Our Campus\n\n" +
+            "Sivakasi, Tamil Nadu, India"
+        );
+
+    }
+
+
+
+    /* PHONE */
+
+    function callNow() {
+
+        window.location.href =
+            "tel:+919344337331";
+
+    }
+
+
+
+    /* EMAIL */
+
+    function sendMail() {
+
+        window.location.href =
+            "mailto:info@codeacademy.com";
+
+    }
+
+
+
+    /* WHATSAPP */
+
+    function openWhatsApp() {
+
+        window.open(
+            "https://wa.me/919344337331",
+            "_blank"
+        );
+
+    }
+
+
+</script>
+ <footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-box footer-brand">
+
+            <h2>Code<span>Academy</span></h2>
+
+            <p>
+                Learn practical IT skills, build real-world projects,
+                and take the next step towards your dream career.
+            </p>
+
+            <div class="social-links">
+                <a href="#">f</a>
+                <a href="#">in</a>
+                <a href="#">𝕏</a>
+                <a href="#">▶️</a>
+            </div>
+
+        </div>
+
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="trainer.html">Trainer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Courses -->
+        <div class="footer-box">
+
+            <h3>Popular Courses</h3>
+
+            <ul>
+                <li><a href="#">Python Full Stack</a></li>
+                <li><a href="#">Java Full Stack</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Data Analytics</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+
+        </div>
+
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <div class="contact-item">
+                <span>📍</span>
+                <p>Sivakasi, Tamil Nadu, India</p>
+            </div>
+
+            <div class="contact-item">
+                <span>📞</span>
+                <p>+91 93443 37331</p>
+            </div>
+
+            <div class="contact-item">
+                <span>✉️</span>
+                <p>info@codeacademy.com</p>
+            </div>
+
+            <div class="contact-item">
+                <span>🕐</span>
+                <p>Mon - Sat : 9 AM - 7 PM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 CodeAcademy. All Rights Reserved.
+        </p>
+
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
