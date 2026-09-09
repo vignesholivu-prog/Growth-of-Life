@@ -151,7 +151,7 @@ img {
     background:
         url("images/about-left.jpg") left center / 50% 100% no-repeat,
         url("images/about-right.jpg") right center / 50% 100% no-repeat,
-        #d39595;
+    #53657d
 }
 
 .hero-overlay {
@@ -363,9 +363,9 @@ img {
     margin-right: 10px;
 }
 
-    
+
 /* =====================================================
-   STATS
+   STATS (static values, no JS counter)
 ===================================================== */
 
 .stats-section {
@@ -489,28 +489,7 @@ img {
    VALUES
 ===================================================== */
 
-.value-card {
-    height: 100%;
-    padding: 30px 25px;
-    text-align: center;
-    background: #ffffff;
-    border: 1px solid #dfe7f2;
-    border-radius: 22px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.value-card:hover {
-    transform: scale(1.08); /* expands the card */
-    box-shadow: 0 20px 40px rgba(24, 68, 130, 0.15);
-}
-
-.value-card:hover .value-icon {
-    transform: scale(1.15);
-    transition: transform 0.3s ease;
-}
-
-
- .values-section {
+.values-section {
     padding: 90px 15px;
     background: #f7f9fc;
 }
@@ -528,13 +507,18 @@ img {
 
     border-radius: 22px;
 
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.04);
 
-    box-shadow: 0 15px 35px rgba(24, 68, 130, 0.12);
+    box-shadow: 0 20px 40px rgba(24, 68, 130, 0.15);
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.15);
+    transition: transform 0.3s ease;
 }
 
 .value-icon {
@@ -554,6 +538,8 @@ img {
     color: #174f9d;
 
     font-size: 27px;
+
+    transition: transform 0.3s ease;
 }
 
 .value-card h4 {
@@ -572,35 +558,20 @@ img {
     line-height: 1.7;
 
     margin: 0;
-} 
+}
 
 
 
 /* =====================================================
    WHY CHOOSE WEGROW
 ===================================================== */
-.why-card {
-    height: 100%;
-    padding: 32px 25px;
-    background: #ffffff;
-    border-radius: 24px;
-    border: 1px solid #dfe7f2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-card:hover {
-    transform: scale(1.08); /* expands the card */
-    box-shadow: 0 22px 45px rgba(25, 69, 135, 0.15);
-}
-
-
 
 .why-section {
     padding: 90px 15px;
     background: #f7f9fc;
 }
 
-/* .why-card {
+.why-card {
     height: 100%;
 
     padding: 32px 25px;
@@ -611,14 +582,14 @@ img {
 
     border: 1px solid #dfe7f2;
 
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-card:hover {
-    transform: translateY(-9px);
+    transform: translateY(-9px) scale(1.03);
 
-    box-shadow: 0 18px 38px rgba(25, 69, 135, 0.13);
-} */
+    box-shadow: 0 22px 45px rgba(25, 69, 135, 0.15);
+}
 
 .why-icon {
     width: 65px;
@@ -726,7 +697,8 @@ img {
 
 
 /* =====================================================
-   FAQ
+   FAQ — Bootstrap Accordion, restyled to match the
+   original custom design (no custom JS required)
 ===================================================== */
 
 .faq-section {
@@ -734,19 +706,18 @@ img {
     background: #f7f9fc;
 }
 
-.faq-container {
+.faq-accordion {
     max-width: 900px;
 
     margin-left: auto;
     margin-right: auto;
 }
 
-.faq-item {
+.faq-accordion .accordion-item {
     margin-bottom: 14px;
 
     border: 1px solid #dfe7f2;
-
-    border-radius: 17px;
+    border-radius: 17px !important;
 
     overflow: hidden;
 
@@ -755,31 +726,20 @@ img {
     transition: all 0.3s ease;
 }
 
-.faq-item:hover {
+.faq-accordion .accordion-item:hover {
     border-color: #b9cdec;
 
     box-shadow: 0 8px 25px rgba(18, 63, 130, 0.08);
 }
 
-.faq-item.active {
-    border-color: #b9cdec;
-
-    box-shadow: 0 10px 28px rgba(25, 69, 135, 0.10);
-}
-
-.faq-question {
-    width: 100%;
-
-    border: 0;
-
-    background: #ffffff;
-
+.faq-accordion .accordion-button {
     padding: 20px 24px;
 
     display: flex;
 
-    justify-content: space-between;
     align-items: center;
+
+    gap: 15px;
 
     text-align: left;
 
@@ -788,53 +748,59 @@ img {
     font-size: 15px;
     font-weight: 700;
 
-    cursor: pointer;
+    background: #ffffff;
+
+    box-shadow: none;
 }
 
-.faq-question span {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-.faq-question span i {
+.faq-accordion .accordion-button i {
     color: #e7a62a;
 
     font-size: 20px;
 }
 
-.faq-arrow {
-    transition: transform 0.3s ease;
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: #17458f;
 
-    color: #174f9d;
+    background: #ffffff;
+
+    box-shadow: none;
 }
 
-.faq-item.active .faq-arrow {
+.faq-accordion .accordion-button:focus {
+    box-shadow: none;
+
+    border-color: #dfe7f2;
+}
+
+.faq-accordion .accordion-button::after {
+    background-image: none;
+
+    content: "\F4FE";
+
+    font-family: "bootstrap-icons";
+
+    font-size: 18px;
+
+    color: #174f9d;
+
+    transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
     transform: rotate(45deg);
 }
 
-.faq-answer {
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: max-height 0.4s ease;
-
-    background: #f7f9fc;
-}
-
-.faq-answer p {
-    padding: 20px 24px;
-
-    margin: 0;
+.faq-accordion .accordion-body {
+    padding: 4px 24px 22px 59px;
 
     color: #53657d;
 
     font-size: 14px;
 
     line-height: 1.8;
+
+    background: #f7f9fc;
 }
 
 
@@ -1187,24 +1153,43 @@ img {
 
 
 /* =====================================================
-   SCROLL REVEAL
+   REVEAL-ON-LOAD ANIMATION (CSS-only replacement for
+   the old IntersectionObserver-driven scroll reveal)
 ===================================================== */
 
-.reveal {
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.reveal.show {
-    opacity: 1;
-
-    transform: translateY(0);
+.reveal-in {
+    animation: fadeInUp 0.7s ease both;
 }
+
+/* Staggered delays for cards that sit in a row/grid */
+.value-card.reveal-in:nth-child(1),
+.why-card.reveal-in:nth-child(1),
+.journey-item.reveal-in:nth-child(1) { animation-delay: 0.05s; }
+
+.value-card.reveal-in:nth-child(2),
+.why-card.reveal-in:nth-child(2),
+.journey-item.reveal-in:nth-child(2) { animation-delay: 0.15s; }
+
+.value-card.reveal-in:nth-child(3),
+.why-card.reveal-in:nth-child(3),
+.journey-item.reveal-in:nth-child(3) { animation-delay: 0.25s; }
+
+.value-card.reveal-in:nth-child(4),
+.why-card.reveal-in:nth-child(4),
+.journey-item.reveal-in:nth-child(4) { animation-delay: 0.35s; }
+
+.why-card.reveal-in:nth-child(5) { animation-delay: 0.45s; }
 
 
 /* =====================================================
@@ -1375,12 +1360,8 @@ img {
         font-size: 26px;
     }
 
-    .faq-question {
+    .faq-accordion .accordion-button {
         padding: 18px;
-    }
-
-    .faq-question span {
-        gap: 10px;
     }
 
     .footer-bottom div {
